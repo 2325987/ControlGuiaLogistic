@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Control de Guías de Transporte y Logística</title>
+
+    <link rel="stylesheet" href="Estilos/Estilos.css">
+
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+
+        <img src="./img/Logo Guias.png"
+             alt="Logo Control de Guías de Transporte"
+             class="img">
+
+        <div class="titulo">
+
+            <h1>Control de Guías de Transporte</h1>
+
+            <h2>y Logística</h2>
+
+            <p>🇨🇷 Sistema de control de transportes de Costa Rica</p>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor">
+
+
+        <!-- FORMULARIO -->
+        <section class="tarjeta">
+
+            <h2>📋 Registro de Guías Logistic Group</h2>
+
+
+            <div class="formulario">
+
+
+                <div class="campo">
+
+                    <label for="guia">
+                        Número de Guía
+                    </label>
+
+                    <input
+                        type="text"
+                        id="guia"
+                        placeholder="Ejemplo: G-001">
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="fecha">
+                        Fecha
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fecha">
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="monto">
+                        Monto a pagar
+                    </label>
+
+                    <input
+                        type="number"
+                        id="monto"
+                        placeholder="Ejemplo: 25000"
+                        min="0">
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="lugar">
+                        Lugar / Destino
+                    </label>
+
+                    <input
+                        type="text"
+                        id="lugar"
+                        placeholder="Ejemplo: San José - Alajuela">
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="estado">
+                        Estado
+                    </label>
+
+                    <select id="estado">
+
+                        <option value="">
+                            Seleccione un estado
+                        </option>
+
+                        <option value="Pendiente">
+                            Pendiente
+                        </option>
+
+                        <option value="En tránsito">
+                            En tránsito
+                        </option>
+
+                        <option value="Entregado">
+                            Entregado
+                        </option>
+
+                        <option value="Cancelado">
+                            Cancelado
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOTONES -->
+            <div class="botones">
+
+                <button
+                    id="agregar"
+                    class="btn btn-agregar"
+                    type="button">
+
+                    ➕ Agregar
+
+                </button>
+
+
+                <button
+                    id="modificar"
+                    class="btn btn-modificar"
+                    type="button">
+
+                    ✏️ Modificar
+
+                </button>
+
+
+                <button
+                    id="eliminar"
+                    class="btn btn-eliminar"
+                    type="button">
+
+                    🗑️ Eliminar
+
+                </button>
+
+
+                <button
+                    id="obtener"
+                    class="btn btn-obtener"
+                    type="button">
+
+                    🔍 Obtener
+
+                </button>
+
+
+                <button
+                    id="limpiar"
+                    class="btn"
+                    type="button">
+
+                    🔄 Limpiar
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- TABLA -->
+        <section class="tarjeta">
+
+            <div class="titulo-tabla">
+
+                <h2>🚚 Guías Registradas</h2>
+
+                <span id="contador">
+                    0 guías
+                </span>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>N.º Guía</th>
+
+                            <th>Fecha</th>
+
+                            <th>Monto</th>
+
+                            <th>Lugar / Destino</th>
+
+                            <th>Estado</th>
+
+                            <th>Acciones</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tablaGuias">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <p id="salida" class="mensaje">
+
+                Sistema listo para registrar guías.
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            © 2026 Control de Guías de Transporte y Logística
+        </p>
+
+        <p>
+            Costa Rica 🇨🇷
+        </p>
+
+    </footer>
+
+
+
+    <script
+        type="module"
+        src="script/script.js">
+    </script>
+
+</body>
+
+</html>
+
