@@ -1,0 +1,2401 @@
+/* ============================================================
+   CONTROL DE GUÍAS DE TRANSPORTE Y LOGÍSTICA
+   ESTILOS PRINCIPALES
+============================================================ */
+
+
+/* ============================================================
+   1. CONFIGURACIÓN GENERAL
+============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f1f5f9,
+            #e2e8f0
+        );
+
+    color: #1e293b;
+
+    min-height: 100vh;
+}
+
+
+/* ============================================================
+   2. LOGIN
+============================================================ */
+
+#login {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a 0%,
+            #1e3a8a 50%,
+            #2563eb 100%
+        );
+}
+
+
+/* ============================================================
+   TARJETA DEL LOGIN
+============================================================ */
+
+.login-tarjeta {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.30);
+
+    animation:
+        aparecerLogin 0.5s ease;
+
+}
+
+
+@keyframes aparecerLogin {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(0.97);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ============================================================
+   LOGO DEL LOGIN
+============================================================ */
+
+.login-logo {
+
+    width: 125px;
+
+    height: 125px;
+
+    object-fit: contain;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 8px;
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.18);
+
+}
+
+
+/* ============================================================
+   TÍTULOS DEL LOGIN
+============================================================ */
+
+.login-tarjeta h1 {
+
+    color: #1e3a8a;
+
+    font-size: 29px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.login-tarjeta h2 {
+
+    color: #334155;
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.login-descripcion {
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ============================================================
+   CAMPOS DEL LOGIN
+============================================================ */
+
+.campo-login {
+
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: left;
+
+    gap: 7px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.campo-login label {
+
+    color: #334155;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+}
+
+
+.campo-login input {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border:
+        1px solid
+        #cbd5e1;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+
+}
+
+
+.campo-login input::placeholder {
+
+    color: #94a3b8;
+
+}
+
+
+.campo-login input:focus {
+
+    outline: none;
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(37, 99, 235, 0.15);
+
+}
+
+
+/* ============================================================
+   CONTRASEÑA
+============================================================ */
+
+.contenedor-clave {
+
+    position: relative;
+
+    width: 100%;
+
+}
+
+
+.contenedor-clave input {
+
+    padding-right: 52px;
+
+}
+
+
+.btn-mostrar-clave {
+
+    position: absolute;
+
+    right: 5px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 19px;
+
+    padding: 8px;
+
+    border-radius: 6px;
+
+}
+
+
+.btn-mostrar-clave:hover {
+
+    background: #f1f5f9;
+
+}
+
+
+/* ============================================================
+   BOTÓN LOGIN
+============================================================ */
+
+.btn-login {
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 14px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1e3a8a,
+            #2563eb
+        );
+
+    color: white;
+
+    box-shadow:
+        0 5px 12px
+        rgba(37, 99, 235, 0.25);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        opacity 0.2s;
+
+}
+
+
+.btn-login:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 18px
+        rgba(37, 99, 235, 0.30);
+
+    opacity: 0.95;
+
+}
+
+
+.btn-login:active {
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* ============================================================
+   MENSAJE DEL LOGIN
+============================================================ */
+
+.mensaje-login {
+
+    min-height: 25px;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+}
+
+
+.mensaje-login.error {
+
+    color: #dc2626;
+
+}
+
+
+.mensaje-login.exito {
+
+    color: #16a34a;
+
+}
+
+
+/* ============================================================
+   DATOS DEMO
+============================================================ */
+
+.datos-demo {
+
+    margin-top: 20px;
+
+    padding: 13px;
+
+    background: #f8fafc;
+
+    border:
+        1px solid
+        #e2e8f0;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    font-size: 13px;
+
+    color: #475569;
+
+}
+
+
+.datos-demo strong {
+
+    color: #1e3a8a;
+
+    margin-bottom: 3px;
+
+}
+
+
+/* ============================================================
+   3. SISTEMA OCULTO
+============================================================ */
+
+.sistema-oculto {
+
+    display: none !important;
+
+}
+
+
+/* ============================================================
+   4. ENCABEZADO PRINCIPAL
+============================================================ */
+
+.encabezado {
+
+    position: relative;
+
+    min-height: 190px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1e3a8a,
+            #2563eb
+        );
+
+    color: white;
+
+    padding: 28px 190px 28px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.20);
+
+}
+
+
+/* ============================================================
+   LOGO PRINCIPAL
+============================================================ */
+
+.encabezado .img {
+
+    width: 135px;
+
+    height: 135px;
+
+    object-fit: contain;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 8px;
+
+    flex-shrink: 0;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* ============================================================
+   TÍTULO PRINCIPAL
+============================================================ */
+
+.titulo {
+
+    text-align: left;
+
+}
+
+
+.titulo h1 {
+
+    font-size: 32px;
+
+    line-height: 1.2;
+
+    margin-bottom: 5px;
+
+}
+
+
+.titulo h2 {
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.titulo p {
+
+    font-size: 15px;
+
+    opacity: 0.95;
+
+}
+
+
+/* ============================================================
+   BOTÓN CERRAR SESIÓN
+============================================================ */
+
+.btn-cerrar-sesion {
+
+    position: absolute;
+
+    right: 25px;
+
+    top: 25px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 11px 16px;
+
+    background: #dc2626;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 10px
+        rgba(0, 0, 0, 0.20);
+
+    transition:
+        transform 0.2s,
+        background 0.2s;
+
+}
+
+
+.btn-cerrar-sesion:hover {
+
+    background: #b91c1c;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* ============================================================
+   5. CONTENEDOR PRINCIPAL
+============================================================ */
+
+.contenedor {
+
+    width: 94%;
+
+    max-width: 1350px;
+
+    margin:
+        30px auto
+        40px auto;
+
+}
+
+
+/* ============================================================
+   6. TARJETAS
+============================================================ */
+
+.tarjeta {
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    padding: 27px;
+
+    margin-bottom: 25px;
+
+    border:
+        1px solid
+        #e2e8f0;
+
+    box-shadow:
+        0 5px 18px
+        rgba(15, 23, 42, 0.08);
+
+}
+
+
+.tarjeta > h2 {
+
+    color: #1e3a8a;
+
+    font-size: 22px;
+
+    margin-bottom: 24px;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+        2px solid
+        #e2e8f0;
+
+}
+
+
+/* ============================================================
+   7. FORMULARIO
+============================================================ */
+
+.formulario {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+}
+
+
+/* ============================================================
+   CAMPOS
+============================================================ */
+
+.campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.campo label {
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    color: #334155;
+
+}
+
+
+.campo input,
+.campo select {
+
+    width: 100%;
+
+    min-height: 44px;
+
+    padding:
+        11px 13px;
+
+    border:
+        1px solid
+        #cbd5e1;
+
+    border-radius: 9px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
+
+}
+
+
+.campo input:hover,
+.campo select:hover {
+
+    border-color: #94a3b8;
+
+}
+
+
+.campo input:focus,
+.campo select:focus {
+
+    outline: none;
+
+    border-color: #2563eb;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(37, 99, 235, 0.12);
+
+}
+
+
+.campo input::placeholder {
+
+    color: #94a3b8;
+
+}
+
+
+/* ============================================================
+   INPUT NUMBER
+============================================================ */
+
+.campo input[type="number"] {
+
+    text-align: left;
+
+}
+
+
+/* ============================================================
+   INPUT DATE
+============================================================ */
+
+.campo input[type="date"] {
+
+    cursor: pointer;
+
+}
+
+
+/* ============================================================
+   SELECT
+============================================================ */
+
+.campo select {
+
+    cursor: pointer;
+
+}
+
+
+/* ============================================================
+   8. BOTONES DEL FORMULARIO
+============================================================ */
+
+.botones {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        #e2e8f0;
+
+}
+
+
+/* ============================================================
+   BOTÓN GENERAL
+============================================================ */
+
+.btn {
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding:
+        11px 18px;
+
+    min-height: 43px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background: #64748b;
+
+    color: white;
+
+    transition:
+        transform 0.2s,
+        opacity 0.2s,
+        box-shadow 0.2s;
+
+}
+
+
+.btn:hover {
+
+    opacity: 0.92;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 4px 9px
+        rgba(0, 0, 0, 0.15);
+
+}
+
+
+.btn:active {
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* ============================================================
+   BOTÓN AGREGAR
+============================================================ */
+
+.btn-agregar {
+
+    background: #16a34a;
+
+}
+
+
+/* ============================================================
+   BOTÓN MODIFICAR
+============================================================ */
+
+.btn-modificar {
+
+    background: #2563eb;
+
+}
+
+
+/* ============================================================
+   BOTÓN ELIMINAR
+============================================================ */
+
+.btn-eliminar {
+
+    background: #dc2626;
+
+}
+
+
+/* ============================================================
+   BOTÓN OBTENER
+============================================================ */
+
+.btn-obtener {
+
+    background: #7c3aed;
+
+}
+
+
+/* ============================================================
+   9. TÍTULO DE LA TABLA
+============================================================ */
+
+.titulo-tabla {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.titulo-tabla h2 {
+
+    color: #1e3a8a;
+
+    font-size: 22px;
+
+    margin: 0;
+
+}
+
+
+/* ============================================================
+   CONTADOR
+============================================================ */
+
+#contador {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 35px;
+
+    padding:
+        7px 14px;
+
+    background: #dbeafe;
+
+    color: #1e40af;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+}
+
+
+/* ============================================================
+   10. BÚSQUEDA
+============================================================ */
+
+.busqueda {
+
+    margin-bottom: 20px;
+
+}
+
+
+.busqueda label {
+
+    font-size: 15px;
+
+}
+
+
+#buscarGuia {
+
+    border:
+        2px solid
+        #2563eb;
+
+    min-height: 47px;
+
+    font-size: 15px;
+
+    padding:
+        12px 15px;
+
+    background: #ffffff;
+
+}
+
+
+#buscarGuia:focus {
+
+    border-color: #1d4ed8;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(37, 99, 235, 0.12);
+
+}
+
+
+#buscarGuia::placeholder {
+
+    color: #94a3b8;
+
+}
+
+
+/* ============================================================
+   11. FILTROS
+============================================================ */
+
+.filtros {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1.2fr auto;
+
+    align-items: end;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fafc,
+            #f1f5f9
+        );
+
+    border:
+        1px solid
+        #e2e8f0;
+
+    border-radius: 12px;
+
+}
+
+
+.filtros .campo {
+
+    min-width: 0;
+
+}
+
+
+.filtros .campo label {
+
+    font-size: 13px;
+
+}
+
+
+.filtros .campo select {
+
+    min-height: 44px;
+
+    font-size: 14px;
+
+}
+
+
+.filtros .btn {
+
+    min-height: 44px;
+
+    white-space: nowrap;
+
+}
+
+
+/* ============================================================
+   12. CONTENEDOR DE TABLA
+============================================================ */
+
+.tabla-contenedor {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    border:
+        1px solid
+        #e2e8f0;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+}
+
+
+/* ============================================================
+   BARRA DE DESPLAZAMIENTO
+============================================================ */
+
+.tabla-contenedor::-webkit-scrollbar {
+
+    height: 9px;
+
+}
+
+
+.tabla-contenedor::-webkit-scrollbar-track {
+
+    background: #e2e8f0;
+
+    border-radius: 10px;
+
+}
+
+
+.tabla-contenedor::-webkit-scrollbar-thumb {
+
+    background: #94a3b8;
+
+    border-radius: 10px;
+
+}
+
+
+.tabla-contenedor::-webkit-scrollbar-thumb:hover {
+
+    background: #64748b;
+
+}
+
+
+/* ============================================================
+   13. TABLA
+============================================================ */
+
+table {
+
+    width: 100%;
+
+    min-width: 1100px;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+}
+
+
+/* ============================================================
+   CABECERA
+============================================================ */
+
+thead {
+
+    background:
+        linear-gradient(
+            135deg,
+            #1e3a8a,
+            #2563eb
+        );
+
+    color: white;
+
+}
+
+
+thead tr th:first-child {
+
+    border-top-left-radius: 10px;
+
+}
+
+
+thead tr th:last-child {
+
+    border-top-right-radius: 10px;
+
+}
+
+
+th {
+
+    padding:
+        14px 11px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    border-bottom:
+        2px solid
+        #1e3a8a;
+
+}
+
+
+/* ============================================================
+   CELDAS
+============================================================ */
+
+td {
+
+    padding:
+        13px 10px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #334155;
+
+    border-bottom:
+        1px solid
+        #e2e8f0;
+
+    vertical-align: middle;
+
+}
+
+
+/* ============================================================
+   FILAS
+============================================================ */
+
+tbody tr {
+
+    background: #ffffff;
+
+    transition:
+        background 0.2s,
+        transform 0.2s;
+
+}
+
+
+tbody tr:nth-child(even) {
+
+    background: #f8fafc;
+
+}
+
+
+tbody tr:hover {
+
+    background: #eff6ff;
+
+}
+
+
+/* ============================================================
+   ÚLTIMA FILA
+============================================================ */
+
+tbody tr:last-child td {
+
+    border-bottom: none;
+
+}
+
+
+/* ============================================================
+   14. NÚMERO DE GUÍA
+============================================================ */
+
+td strong {
+
+    color: #1e3a8a;
+
+    font-size: 14px;
+
+}
+
+
+td:first-child {
+
+    white-space: nowrap;
+
+}
+
+
+/* ============================================================
+   15. PLACA
+============================================================ */
+
+td:nth-child(3) strong {
+
+    color: #475569;
+
+    background: #f1f5f9;
+
+    padding:
+        5px 9px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    display: inline-block;
+
+}
+
+
+/* ============================================================
+   16. MONTO
+============================================================ */
+
+td:nth-child(5) {
+
+    font-weight: bold;
+
+    color: #166534;
+
+    white-space: nowrap;
+
+}
+
+
+/* ============================================================
+   17. HOJAS
+============================================================ */
+
+td:nth-child(6) {
+
+    font-weight: bold;
+
+    color: #475569;
+
+}
+
+
+td:nth-child(6)::before {
+
+    content: "";
+
+}
+
+
+/* ============================================================
+   18. ESTADOS
+============================================================ */
+
+.estado {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 100px;
+
+    padding:
+        6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+}
+
+
+/* ============================================================
+   PENDIENTE
+============================================================ */
+
+.estado-pendiente {
+
+    background: #fef3c7;
+
+    color: #92400e;
+
+    border:
+        1px solid
+        #fde68a;
+
+}
+
+
+/* ============================================================
+   EN TRÁNSITO
+============================================================ */
+
+.estado-transito {
+
+    background: #dbeafe;
+
+    color: #1e40af;
+
+    border:
+        1px solid
+        #bfdbfe;
+
+}
+
+
+/* ============================================================
+   ENTREGADO
+============================================================ */
+
+.estado-entregado {
+
+    background: #dcfce7;
+
+    color: #166534;
+
+    border:
+        1px solid
+        #bbf7d0;
+
+}
+
+
+/* ============================================================
+   CANCELADO
+============================================================ */
+
+.estado-cancelado {
+
+    background: #fee2e2;
+
+    color: #991b1b;
+
+    border:
+        1px solid
+        #fecaca;
+
+}
+
+
+/* ============================================================
+   19. BOTONES DE LA TABLA
+============================================================ */
+
+.btn-tabla {
+
+    border: none;
+
+    border-radius: 6px;
+
+    padding:
+        7px 10px;
+
+    margin:
+        2px 1px;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        opacity 0.2s,
+        box-shadow 0.2s;
+
+}
+
+
+.btn-tabla:hover {
+
+    transform:
+        translateY(-1px);
+
+    opacity: 0.90;
+
+    box-shadow:
+        0 3px 7px
+        rgba(0, 0, 0, 0.15);
+
+}
+
+
+.btn-tabla:active {
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* ============================================================
+   BOTÓN MODIFICAR TABLA
+============================================================ */
+
+.btn-tabla-modificar {
+
+    background: #2563eb;
+
+}
+
+
+/* ============================================================
+   BOTÓN ELIMINAR TABLA
+============================================================ */
+
+.btn-tabla-eliminar {
+
+    background: #dc2626;
+
+}
+
+
+/* ============================================================
+   20. MENSAJE DEL SISTEMA
+============================================================ */
+
+.mensaje {
+
+    margin-top: 20px;
+
+    padding:
+        14px 16px;
+
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #f1f5f9;
+
+    color: #334155;
+
+    border:
+        1px solid
+        #e2e8f0;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    line-height: 1.4;
+
+}
+
+
+/* ============================================================
+   21. PIE DE PÁGINA
+============================================================ */
+
+footer {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1e293b
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding:
+        22px 15px;
+
+    margin-top: 40px;
+
+    border-top:
+        4px solid
+        #2563eb;
+
+}
+
+
+footer p {
+
+    margin: 5px 0;
+
+    font-size: 13px;
+
+    opacity: 0.95;
+
+}
+
+
+footer p:first-child {
+
+    font-weight: bold;
+
+}
+
+
+/* ============================================================
+   22. ESTADOS DE INPUT
+============================================================ */
+
+input:disabled,
+select:disabled {
+
+    background: #e2e8f0;
+
+    cursor: not-allowed;
+
+    opacity: 0.7;
+
+}
+
+
+/* ============================================================
+   23. SELECCIÓN DE TEXTO
+============================================================ */
+
+::selection {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+
+/* ============================================================
+   24. RESPONSIVE - PANTALLAS GRANDES
+============================================================ */
+
+@media (min-width: 1400px) {
+
+    .contenedor {
+
+        max-width: 1400px;
+
+    }
+
+
+    table {
+
+        min-width: 1150px;
+
+    }
+
+}
+
+
+/* ============================================================
+   25. RESPONSIVE - TABLET
+============================================================ */
+
+@media (max-width: 1000px) {
+
+    .encabezado {
+
+        padding:
+            25px 25px 85px 25px;
+
+    }
+
+
+    .btn-cerrar-sesion {
+
+        top: auto;
+
+        bottom: 20px;
+
+        right: 25px;
+
+    }
+
+
+    .formulario {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+
+    .filtros {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .filtros .btn {
+
+        width: 100%;
+
+    }
+
+}
+
+
+/* ============================================================
+   26. RESPONSIVE - TABLET PEQUEÑA
+============================================================ */
+
+@media (max-width: 800px) {
+
+    #login {
+
+        padding: 15px;
+
+    }
+
+
+    .login-tarjeta {
+
+        max-width: 420px;
+
+        padding: 30px 25px;
+
+    }
+
+
+    .encabezado {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding:
+            25px 20px 85px 20px;
+
+        gap: 15px;
+
+    }
+
+
+    .encabezado .img {
+
+        width: 115px;
+
+        height: 115px;
+
+    }
+
+
+    .titulo {
+
+        text-align: center;
+
+    }
+
+
+    .titulo h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    .titulo h2 {
+
+        font-size: 21px;
+
+    }
+
+
+    .titulo p {
+
+        font-size: 14px;
+
+    }
+
+
+    .btn-cerrar-sesion {
+
+        position: absolute;
+
+        bottom: 20px;
+
+        left: 50%;
+
+        right: auto;
+
+        transform:
+            translateX(-50%);
+
+        width: 220px;
+
+    }
+
+
+    .btn-cerrar-sesion:hover {
+
+        transform:
+            translateX(-50%)
+            translateY(-2px);
+
+    }
+
+
+    .contenedor {
+
+        width: 94%;
+
+        margin-top: 20px;
+
+    }
+
+
+    .tarjeta {
+
+        padding: 22px;
+
+    }
+
+
+    .formulario {
+
+        grid-template-columns: 1fr;
+
+        gap: 17px;
+
+    }
+
+
+    .botones {
+
+        flex-direction: column;
+
+    }
+
+
+    .botones .btn {
+
+        width: 100%;
+
+    }
+
+
+    .filtros {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .filtros .btn {
+
+        width: 100%;
+
+    }
+
+
+    .titulo-tabla {
+
+        align-items: flex-start;
+
+    }
+
+}
+
+
+/* ============================================================
+   27. RESPONSIVE - CELULAR
+============================================================ */
+
+@media (max-width: 500px) {
+
+    body {
+
+        font-size: 14px;
+
+    }
+
+
+    /* ========================================================
+       LOGIN
+    ======================================================== */
+
+    #login {
+
+        padding: 12px;
+
+    }
+
+
+    .login-tarjeta {
+
+        padding:
+            25px 18px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .login-logo {
+
+        width: 100px;
+
+        height: 100px;
+
+    }
+
+
+    .login-tarjeta h1 {
+
+        font-size: 23px;
+
+    }
+
+
+    .login-tarjeta h2 {
+
+        font-size: 18px;
+
+    }
+
+
+    .login-descripcion {
+
+        font-size: 13px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .datos-demo {
+
+        font-size: 12px;
+
+    }
+
+
+    /* ========================================================
+       ENCABEZADO
+    ======================================================== */
+
+    .encabezado {
+
+        padding:
+            20px 12px 80px 12px;
+
+    }
+
+
+    .encabezado .img {
+
+        width: 95px;
+
+        height: 95px;
+
+    }
+
+
+    .titulo h1 {
+
+        font-size: 21px;
+
+    }
+
+
+    .titulo h2 {
+
+        font-size: 17px;
+
+        margin-bottom: 8px;
+
+    }
+
+
+    .titulo p {
+
+        font-size: 12px;
+
+    }
+
+
+    .btn-cerrar-sesion {
+
+        width: 200px;
+
+        padding:
+            9px 12px;
+
+        font-size: 13px;
+
+        bottom: 18px;
+
+    }
+
+
+    /* ========================================================
+       CONTENEDOR
+    ======================================================== */
+
+    .contenedor {
+
+        width: 94%;
+
+        margin:
+            15px auto
+            25px auto;
+
+    }
+
+
+    /* ========================================================
+       TARJETAS
+    ======================================================== */
+
+    .tarjeta {
+
+        padding: 17px;
+
+        border-radius: 12px;
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .tarjeta > h2 {
+
+        font-size: 18px;
+
+        line-height: 1.4;
+
+        margin-bottom: 18px;
+
+    }
+
+
+    /* ========================================================
+       FORMULARIO
+    ======================================================== */
+
+    .formulario {
+
+        gap: 14px;
+
+    }
+
+
+    .campo label {
+
+        font-size: 13px;
+
+    }
+
+
+    .campo input,
+    .campo select {
+
+        min-height: 42px;
+
+        padding:
+            10px 11px;
+
+        font-size: 14px;
+
+    }
+
+
+    /* ========================================================
+       BOTONES
+    ======================================================== */
+
+    .botones {
+
+        margin-top: 20px;
+
+        padding-top: 17px;
+
+        gap: 8px;
+
+    }
+
+
+    .btn {
+
+        width: 100%;
+
+        min-height: 42px;
+
+        font-size: 13px;
+
+    }
+
+
+    /* ========================================================
+       TABLA
+    ======================================================== */
+
+    .titulo-tabla {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+    }
+
+
+    .titulo-tabla h2 {
+
+        font-size: 18px;
+
+    }
+
+
+    #contador {
+
+        font-size: 12px;
+
+        min-height: 32px;
+
+        padding:
+            6px 12px;
+
+    }
+
+
+    .busqueda {
+
+        margin-bottom: 15px;
+
+    }
+
+
+    #buscarGuia {
+
+        min-height: 43px;
+
+        font-size: 14px;
+
+    }
+
+
+    .filtros {
+
+        padding: 15px;
+
+        gap: 13px;
+
+    }
+
+
+    .filtros .campo select {
+
+        font-size: 13px;
+
+    }
+
+
+    .tabla-contenedor {
+
+        border-radius: 8px;
+
+    }
+
+
+    table {
+
+        min-width: 1100px;
+
+    }
+
+
+    th {
+
+        padding:
+            11px 8px;
+
+        font-size: 11px;
+
+    }
+
+
+    td {
+
+        padding:
+            10px 8px;
+
+        font-size: 11px;
+
+    }
+
+
+    td strong {
+
+        font-size: 12px;
+
+    }
+
+
+    td:nth-child(3) strong {
+
+        padding:
+            4px 7px;
+
+        font-size: 11px;
+
+    }
+
+
+    .estado {
+
+        min-width: 85px;
+
+        padding:
+            5px 8px;
+
+        font-size: 10px;
+
+    }
+
+
+    .btn-tabla {
+
+        display: block;
+
+        width: 100%;
+
+        margin:
+            3px 0;
+
+        font-size: 10px;
+
+        padding:
+            6px 8px;
+
+    }
+
+
+    .mensaje {
+
+        font-size: 12px;
+
+        padding:
+            12px;
+
+    }
+
+
+    /* ========================================================
+       FOOTER
+    ======================================================== */
+
+    footer {
+
+        margin-top: 25px;
+
+        padding:
+            18px 10px;
+
+    }
+
+
+    footer p {
+
+        font-size: 11px;
+
+    }
+
+}
+
+
+/* ============================================================
+   28. PANTALLAS MUY PEQUEÑAS
+============================================================ */
+
+@media (max-width: 350px) {
+
+    .login-tarjeta {
+
+        padding:
+            20px 14px;
+
+    }
+
+
+    .login-logo {
+
+        width: 85px;
+
+        height: 85px;
+
+    }
+
+
+    .login-tarjeta h1 {
+
+        font-size: 20px;
+
+    }
+
+
+    .login-tarjeta h2 {
+
+        font-size: 16px;
+
+    }
+
+
+    .encabezado .img {
+
+        width: 85px;
+
+        height: 85px;
+
+    }
+
+
+    .titulo h1 {
+
+        font-size: 19px;
+
+    }
+
+
+    .titulo h2 {
+
+        font-size: 16px;
+
+    }
+
+
+    .titulo p {
+
+        font-size: 11px;
+
+    }
+
+
+    .tarjeta {
+
+        padding: 14px;
+
+    }
+
+
+    .tarjeta > h2 {
+
+        font-size: 17px;
+
+    }
+
+}

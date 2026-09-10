@@ -10,275 +10,644 @@
 
     <title>Control de Guías de Transporte y Logística</title>
 
-    <link rel="stylesheet" href="Estilos/Estilos.css">
+    <link rel="stylesheet" href="Estilo/estilo.css">
 
 </head>
 
 <body>
 
-    <!-- ENCABEZADO -->
-    <header class="encabezado">
+    <!-- =====================================================
+         LOGIN
+    ====================================================== -->
 
-        <img src="./img/Logo Guias.png"
-             alt="Logo Control de Guías de Transporte"
-             class="img">
+    <section id="login">
 
-        <div class="titulo">
+        <div class="login-tarjeta">
 
-            <h1>Control de Guías de Transporte</h1>
+            <img
+                src="./img/Logo Guias.png"
+                alt="Logo Control de Guías"
+                class="login-logo"
+            >
 
-            <h2>y Logística</h2>
+            <h1>
+                Control de Guías
+            </h1>
 
-            <p>🇨🇷 Sistema de control de transportes de Costa Rica</p>
+            <h2>
+                Inicio de sesión
+            </h2>
 
-        </div>
+            <p class="login-descripcion">
+                Ingrese sus credenciales para acceder al sistema
+            </p>
 
-    </header>
+            <div class="campo-login">
 
+                <label for="usuario">
+                    👤 Usuario
+                </label>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="contenedor">
+                <input
+                    type="text"
+                    id="usuario"
+                    placeholder="Ingrese su usuario"
+                    autocomplete="username"
+                >
 
+            </div>
 
-        <!-- FORMULARIO -->
-        <section class="tarjeta">
+            <div class="campo-login">
 
-            <h2>📋 Registro de Guías Logistic Group</h2>
+                <label for="clave">
+                    🔑 Contraseña
+                </label>
 
-
-            <div class="formulario">
-
-
-                <div class="campo">
-
-                    <label for="guia">
-                        Número de Guía
-                    </label>
-
-                    <input
-                        type="text"
-                        id="guia"
-                        placeholder="Ejemplo: G-001">
-
-                </div>
-
-
-                <div class="campo">
-
-                    <label for="fecha">
-                        Fecha
-                    </label>
+                <div class="contenedor-clave">
 
                     <input
-                        type="date"
-                        id="fecha">
+                        type="password"
+                        id="clave"
+                        placeholder="Ingrese su contraseña"
+                        autocomplete="current-password"
+                    >
 
-                </div>
-
-
-                <div class="campo">
-
-                    <label for="monto">
-                        Monto a pagar
-                    </label>
-
-                    <input
-                        type="number"
-                        id="monto"
-                        placeholder="Ejemplo: 25000"
-                        min="0">
-
-                </div>
-
-
-                <div class="campo">
-
-                    <label for="lugar">
-                        Lugar / Destino
-                    </label>
-
-                    <input
-                        type="text"
-                        id="lugar"
-                        placeholder="Ejemplo: San José - Alajuela">
-
-                </div>
-
-
-                <div class="campo">
-
-                    <label for="estado">
-                        Estado
-                    </label>
-
-                    <select id="estado">
-
-                        <option value="">
-                            Seleccione un estado
-                        </option>
-
-                        <option value="Pendiente">
-                            Pendiente
-                        </option>
-
-                        <option value="En tránsito">
-                            En tránsito
-                        </option>
-
-                        <option value="Entregado">
-                            Entregado
-                        </option>
-
-                        <option value="Cancelado">
-                            Cancelado
-                        </option>
-
-                    </select>
+                    <button
+                        type="button"
+                        id="mostrarClave"
+                        class="btn-mostrar-clave"
+                    >
+                        👁️
+                    </button>
 
                 </div>
 
             </div>
 
+            <button
+                type="button"
+                id="btnLogin"
+                class="btn-login"
+            >
+                🔐 Ingresar
+            </button>
 
-            <!-- BOTONES -->
-            <div class="botones">
+            <p
+                id="mensajeLogin"
+                class="mensaje-login"
+            ></p>
 
-                <button
-                    id="agregar"
-                    class="btn btn-agregar"
-                    type="button">
+            <div class="datos-demo">
 
-                    ➕ Agregar
+                <strong>
+                    Datos de acceso:
+                </strong>
 
-                </button>
+                <span>
+                    Todos los Derechos Reservados , se Prohibe copias o alteracion 
+                </span>
 
-
-                <button
-                    id="modificar"
-                    class="btn btn-modificar"
-                    type="button">
-
-                    ✏️ Modificar
-
-                </button>
-
-
-                <button
-                    id="eliminar"
-                    class="btn btn-eliminar"
-                    type="button">
-
-                    🗑️ Eliminar
-
-                </button>
-
-
-                <button
-                    id="obtener"
-                    class="btn btn-obtener"
-                    type="button">
-
-                    🔍 Obtener
-
-                </button>
-
-
-                <button
-                    id="limpiar"
-                    class="btn"
-                    type="button">
-
-                    🔄 Limpiar
-
-                </button>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- TABLA -->
-        <section class="tarjeta">
-
-            <div class="titulo-tabla">
-
-                <h2>🚚 Guías Registradas</h2>
-
-                <span id="contador">
-                    0 guías
+                <span>
+                    Por Corporacion Ulate Cespedes y Asociados  2026 (version 2.2100.1)
                 </span>
 
             </div>
 
+        </div>
 
-            <div class="tabla-contenedor">
-
-                <table>
-
-                    <thead>
-
-                        <tr>
-
-                            <th>N.º Guía</th>
-
-                            <th>Fecha</th>
-
-                            <th>Monto</th>
-
-                            <th>Lugar / Destino</th>
-
-                            <th>Estado</th>
-
-                            <th>Acciones</th>
-
-                        </tr>
-
-                    </thead>
+    </section>
 
 
-                    <tbody id="tablaGuias">
+    <!-- =====================================================
+         SISTEMA PRINCIPAL
+    ====================================================== -->
 
-                    </tbody>
+    <div id="sistema" class="sistema-oculto">
 
-                </table>
+
+        <!-- =====================================================
+             ENCABEZADO
+        ====================================================== -->
+
+        <header class="encabezado">
+
+            <img
+                src="./img/Logo Guias.png"
+                alt="Logo Control de Guías de Transporte"
+                class="img"
+            >
+
+            <div class="titulo">
+
+                <h1>
+                    Control de Guías de Transporte
+                </h1>
+
+                <h2>
+                    y Logística
+                </h2>
+
+                <p>
+                    🇨🇷 Sistema de control de transportes de Costa Rica
+                </p>
 
             </div>
 
+            <button
+                id="cerrarSesion"
+                class="btn-cerrar-sesion"
+                type="button"
+            >
+                🚪 Cerrar sesión
+            </button>
 
-            <p id="salida" class="mensaje">
+        </header>
 
-                Sistema listo para registrar guías.
 
+        <!-- =====================================================
+             CONTENIDO PRINCIPAL
+        ====================================================== -->
+
+        <main class="contenedor">
+
+
+            <!-- =================================================
+                 FORMULARIO
+            ================================================== -->
+
+            <section class="tarjeta">
+
+                <h2>
+                    📋 Registro de Guías Logistic Group
+                </h2>
+
+                <div class="formulario">
+
+
+                    <!-- NÚMERO DE GUÍA -->
+
+                    <div class="campo">
+
+                        <label for="guia">
+                            Número de Guía
+                        </label>
+
+                        <input
+                            type="text"
+                            id="guia"
+                            placeholder="Ejemplo: G-001"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <!-- FECHA -->
+
+                    <div class="campo">
+
+                        <label for="fecha">
+                            Fecha
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fecha"
+                        >
+
+                    </div>
+
+
+                    <!-- PLACA -->
+
+                    <div class="campo">
+
+                        <label for="placa">
+                            Número de Placa
+                        </label>
+
+                        <input
+                            type="text"
+                            id="placa"
+                            placeholder="Ejemplo: FRT-001"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <!-- LUGAR -->
+
+                    <div class="campo">
+
+                        <label for="lugar">
+                            Lugar / Destino
+                        </label>
+
+                        <input
+                            type="text"
+                            id="lugar"
+                            placeholder="Ejemplo: San José - Alajuela"
+                        >
+
+                    </div>
+
+
+                    <!-- MONTO -->
+
+                    <div class="campo">
+
+                        <label for="monto">
+                            Monto a pagar
+                        </label>
+
+                        <input
+                            type="number"
+                            id="monto"
+                            placeholder="Ejemplo: 25000"
+                            min="0"
+                            step="0.01"
+                        >
+
+                    </div>
+
+
+                    <!-- HOJAS -->
+
+                    <div class="campo">
+
+                        <label for="hojas">
+                            Cantidad de Hojas
+                        </label>
+
+                        <input
+                            type="number"
+                            id="hojas"
+                            placeholder="Ejemplo: 1 a 10"
+                            min="1"
+                            max="10"
+                        >
+
+                    </div>
+
+
+                    <!-- ESTADO -->
+
+                    <div class="campo">
+
+                        <label for="estado">
+                            Estado
+                        </label>
+
+                        <select id="estado">
+
+                            <option value="">
+                                Seleccione un estado
+                            </option>
+
+                            <option value="Pendiente">
+                                Pendiente
+                            </option>
+
+                            <option value="En tránsito">
+                                En tránsito
+                            </option>
+
+                            <option value="Entregado">
+                                Entregado
+                            </option>
+
+                            <option value="Cancelado">
+                                Cancelado
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     BOTONES
+                ================================================== -->
+
+                <div class="botones">
+
+                    <button
+                        id="agregar"
+                        class="btn btn-agregar"
+                        type="button"
+                    >
+                        ➕ Agregar
+                    </button>
+
+                    <button
+                        id="modificar"
+                        class="btn btn-modificar"
+                        type="button"
+                    >
+                        ✏️ Modificar
+                    </button>
+
+                    <button
+                        id="eliminar"
+                        class="btn btn-eliminar"
+                        type="button"
+                    >
+                        🗑️ Eliminar
+                    </button>
+
+                    <button
+                        id="obtener"
+                        class="btn btn-obtener"
+                        type="button"
+                    >
+                        🔍 Obtener
+                    </button>
+
+                    <button
+                        id="limpiar"
+                        class="btn"
+                        type="button"
+                    >
+                        🔄 Limpiar
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 TABLA
+            ================================================== -->
+
+            <section class="tarjeta">
+
+                <div class="titulo-tabla">
+
+                    <h2>
+                        🚚 Guías Registradas
+                    </h2>
+
+                    <span id="contador">
+                        0 guías
+                    </span>
+
+                </div>
+
+
+                <!-- =================================================
+                     BÚSQUEDA POR GUÍA
+                ================================================== -->
+
+                <div class="campo busqueda">
+
+                    <label for="buscarGuia">
+                        🔎 Buscar por número de guía
+                    </label>
+
+                    <input
+                        type="text"
+                        id="buscarGuia"
+                        placeholder="Escriba G-001, G-002, etc."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <!-- =================================================
+                     FILTROS
+                ================================================== -->
+
+                <div class="filtros">
+
+
+                    <!-- FILTRO PLACA -->
+
+                    <div class="campo">
+
+                        <label for="filtrarPlaca">
+                            🚛 Filtrar por placa
+                        </label>
+
+                        <select id="filtrarPlaca">
+
+                            <option value="todos">
+                                Todas las placas
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- FILTRO ESTADO -->
+
+                    <div class="campo">
+
+                        <label for="filtrarEstado">
+                            📦 Filtrar por estado
+                        </label>
+
+                        <select id="filtrarEstado">
+
+                            <option value="todos">
+                                Todos los estados
+                            </option>
+
+                            <option value="Pendiente">
+                                Pendiente
+                            </option>
+
+                            <option value="En tránsito">
+                                En tránsito
+                            </option>
+
+                            <option value="Entregado">
+                                Entregado
+                            </option>
+
+                            <option value="Cancelado">
+                                Cancelado
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- ORDENAR -->
+
+                    <div class="campo">
+
+                        <label for="ordenar">
+                            🔢 Ordenar por
+                        </label>
+
+                        <select id="ordenar">
+
+                            <option value="guiaAsc">
+                                Guía: menor a mayor
+                            </option>
+
+                            <option value="guiaDesc">
+                                Guía: mayor a menor
+                            </option>
+
+                            <option value="fechaAsc">
+                                Fecha: más antigua
+                            </option>
+
+                            <option value="fechaDesc">
+                                Fecha: más reciente
+                            </option>
+
+                            <option value="placaAsc">
+                                Placa: A-Z
+                            </option>
+
+                            <option value="placaDesc">
+                                Placa: Z-A
+                            </option>
+
+                            <option value="montoAsc">
+                                Monto: menor a mayor
+                            </option>
+
+                            <option value="montoDesc">
+                                Monto: mayor a menor
+                            </option>
+
+                            <option value="hojasAsc">
+                                Hojas: menor a mayor
+                            </option>
+
+                            <option value="hojasDesc">
+                                Hojas: mayor a menor
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- QUITAR FILTROS -->
+
+                    <button
+                        id="quitarFiltros"
+                        class="btn"
+                        type="button"
+                    >
+                        🔄 Mostrar todos
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     TABLA
+                ================================================== -->
+
+                <div class="tabla-contenedor">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    N.º Guía
+                                </th>
+
+                                <th>
+                                    Fecha
+                                </th>
+
+                                <th>
+                                    Placa
+                                </th>
+
+                                <th>
+                                    Lugar / Destino
+                                </th>
+
+                                <th>
+                                    Monto
+                                </th>
+
+                                <th>
+                                    Hojas
+                                </th>
+
+                                <th>
+                                    Estado
+                                </th>
+
+                                <th>
+                                    Acciones
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="tablaGuias">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- =================================================
+                     MENSAJE
+                ================================================== -->
+
+                <p
+                    id="salida"
+                    class="mensaje"
+                >
+                    Sistema listo para registrar guías.
+                </p>
+
+            </section>
+
+        </main>
+
+
+        <!-- =====================================================
+             PIE DE PÁGINA
+        ====================================================== -->
+
+        <footer>
+
+            <p>
+                © 2026 Control de Guías de Transporte y Logística
+                Por Corporacion Ulate Cespedes y Asociados  2026 (version 2.2100.1)
             </p>
 
-        </section>
+            <p>
+                Costa Rica 🇨🇷
+            </p>
 
-    </main>
+        </footer>
 
-
-
-    <!-- PIE DE PÁGINA -->
-    <footer>
-
-        <p>
-            © 2026 Control de Guías de Transporte y Logística
-        </p>
-
-        <p>
-            Costa Rica 🇨🇷
-        </p>
-
-    </footer>
+    </div>
 
 
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
     <script
         type="module"
-        src="script/script.js">
-    </script>
+        src="script/script.js"
+    ></script>
 
 </body>
 
 </html>
-
